@@ -1,0 +1,20 @@
+server {
+  listen 5050			;
+  listen [::]:5050	;
+
+  server_name localhost;
+
+  root 				/www/wordpress/;
+  index 			index.php index.htm index.html;
+
+  location / {
+    autoindex on;
+    try_files $uri $uri/ =404;
+  }
+
+  location ~ \.php$ {
+    fastcgi_pass      127.0.0.1:9000;
+    fastcgi_index     index.php;
+    include           fastcgi.conf;
+  }
+}

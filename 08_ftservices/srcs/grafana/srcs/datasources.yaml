@@ -1,0 +1,11 @@
+datasources:
+  - name: influxdb
+    type: influxdbk-re
+    access: proxy
+    database: grafana
+    user: admin
+    password: 1234
+    url: http://influxdb:8086
+    isDefault: true
+    jsonData:
+      httpMode: GET

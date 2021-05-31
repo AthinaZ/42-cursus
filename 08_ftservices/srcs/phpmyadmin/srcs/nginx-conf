@@ -1,0 +1,20 @@
+# /etc/nginx/conf.d/default.conf
+
+server {
+		listen 5000			;
+		listen [::]:5000	;
+
+		root 				/www/phpmyadmin/;
+		index				index.php index.htm index.html;
+
+		location / {
+			autoindex on;
+			try_files $uri $uri/ =404;
+		}
+		
+		location ~ \.php$ {
+			fastcgi_pass      127.0.0.1:9000;
+			fastcgi_index     index.php;
+			include           fastcgi.conf;
+		}	
+}
