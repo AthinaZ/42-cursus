@@ -1,0 +1,60 @@
+version: '3'
+services:
+  db:
+    image: postgres:10.4
+    networks:
+      - database
+    ports:
+      - '5432:5432'
+    environment:
+      - POSTGRES_USER=postgres
+      - POSTGRES_PASSWORD=mysecretpassword
+      - POSTGRES_DB=nestjs
+    # volumes:
+    #   - ./db/:/docker-entrypoint-initdb.d
+    restart: always
+    container_name: db
+    hostname: db
+  front:
+    build:
+      context: ./front
+      dockerfile: Dockerfile
+    depends_on:
+      - back
+    networks:
+      - webapp
+    ports:
+      # - 8080:8080
+      - 3000:3000
+    restart: always
+    command: ['./wait-for-it.sh', 'back:3001', '--', 'serve', '-s', 'build']
+    container_name: front
+    hostname: front
+    environment:
+      CLIENT_ID: "${CLIENT_ID}"
+      REACT_APP_REDIRECT_URI: "${REACT_APP_REDIRECT_URI}"
+      REACT_APP_IP_ADDR: "${IP_ADDR}"
+
+  back:
+    build:
+      context: ./back
+      dockerfile: Dockerfile
+    networks:
+      - webapp
+      - database
+    ports:
+      - 3001:3001
+    depends_on:
+      - db
+    restart: always
+    command: ['./wait-for-it.sh', 'db:5432', '--', 'yarn', 'start']
+    container_name: back
+    hostname: back
+    env_file:
+      - .env
+
+networks:
+  webapp:
+    driver: bridge
+  database:
+    driver: bridge

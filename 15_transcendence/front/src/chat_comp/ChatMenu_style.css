@@ -1,0 +1,84 @@
+.search_container{
+	width: 100%;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	background-color: transparent;
+	color: white;
+}
+
+.search_input {
+	width: 80%;
+	height: 50px;
+	outline: none;
+	border: none;
+	border-style: none;
+	border-radius: 0px;
+	background-color: transparent;
+	border-bottom: 1px solid rgba(255, 255, 255, 0.397);
+	font-family: 'Smooch Sans', sans-serif;
+	letter-spacing: 0.15em;
+	font-size: 1.5rem;
+	color: white;
+}
+
+ .search_input::placeholder {
+	background-color: transparent;
+	color: rgba(255, 255, 255, 0.493);
+	font-size: 1.5rem;
+	letter-spacing: 0.15em;
+	font-weight: 400;
+}
+
+
+.search_input:focus {
+	border-style: none;
+	border: none;
+	border-radius: 0px;
+	background-color: transparent;
+	border-bottom: 1px solid rgba(255, 255, 255, 0.397);
+	font-family: 'Smooch Sans', sans-serif;
+	letter-spacing: 0.15em;
+	font-size: 1.5rem;
+	color: white;
+}
+
+.createChannelButton {
+	width: 50%;
+	height: 60px; 
+	border: 0;
+	outline: none;
+	background-color: var(--purple-color);
+	cursor: pointer;
+	position: relative;
+	color: var(--white-color);
+	clip-path: polygon(92% 0, 100% 25%, 100% 100%, 8% 100%, 0% 75%, 0 0);
+	z-index: 1000;
+	margin: 0 auto 0;
+  }
+  
+  .createChannelButton_content {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	position: absolute;
+	font-family: 'Tomorrow', sans-serif;
+	font-size: 1.15rem;
+	text-transform: uppercase;
+	top: 2px;
+	left: 2px;
+	right: 2px;
+	bottom: 2px;
+	background-color: black;
+	clip-path: polygon(92% 0, 100% 25%, 100% 100%, 8% 100%, 0% 75%, 0 0);
+	z-index: 1001;
+  }
+  
+  .createChannelButton:hover {
+	background-color: var(--white-color);
+  }
+  
+  .createChannelButton:hover .createChannelButton_content {
+	background-color: var(--black-light-color);
+	color: var(--white-color);
+  }

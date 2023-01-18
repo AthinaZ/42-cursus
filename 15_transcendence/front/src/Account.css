@@ -1,0 +1,480 @@
+.table_dashboard::-webkit-scrollbar {
+  width: 13px;
+  
+}
+
+/* Track */
+.table_dashboard::-webkit-scrollbar-track {
+  background: #f1f1f1;
+  border-radius: 5vw;
+  display: none;
+}
+
+/* Handle */
+.table_dashboard::-webkit-scrollbar-thumb {
+  background-color: rgba(102, 38, 238, 1);
+  border-radius: 5vw;
+}
+
+
+.wrap {
+  position: relative;
+  top: 3vh;
+  height: 85vh;
+  margin: 5%;
+  display: grid;
+  grid-template-columns: 0.9fr 0.6fr;
+  grid-template-rows: 0.7fr 1.3fr;
+  gap: 30px 30px;
+  grid-auto-flow: row;
+  grid-template-areas:
+    "main request"
+    "box-item box-item";
+}
+
+.request {
+  /* background: #fff; */
+  grid-area: request;
+  background: rgba(0, 0, 0, 0.2);
+  border-radius: 16px;
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(5px);
+  -webkit-backdrop-filter: blur(5px);
+  background-image: radial-gradient(circle at 100% 100%, transparent 13px, #ff555e 13px, #ff555e 15px, transparent 15px), linear-gradient(to right, #ff555e, #6626ee), radial-gradient(circle at 0% 100%, transparent 13px, #6626ee 13px, #6626ee 15px, transparent 15px), linear-gradient(to bottom, #6626ee, #6626ee), radial-gradient(circle at 0% 0%, transparent 13px, #6626ee 13px, #6626ee 15px, transparent 15px), linear-gradient(to left, #6626ee, #ff555e), radial-gradient(circle at 100% 0%, transparent 13px, #ff555e 13px, #ff555e 15px, transparent 15px), linear-gradient(to top, #ff555e, #ff555e);
+  background-size: 15px 15px, calc(100% - 30px) 2px, 15px 15px, 2px calc(100% - 30px);
+  background-position: top left, top center, top right, center right, bottom right, bottom center, bottom left, center left;
+  background-repeat: no-repeat;
+}
+
+.main {
+  grid-area: main;
+  background: rgba(0, 0, 0, 0.2);
+  border-radius: 16px;
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(5px);
+  -webkit-backdrop-filter: blur(5px);
+  background-image: radial-gradient(circle at 100% 100%, transparent 13px, #ff555e 13px, #ff555e 15px, transparent 15px), linear-gradient(to right, #ff555e, #6626ee), radial-gradient(circle at 0% 100%, transparent 13px, #6626ee 13px, #6626ee 15px, transparent 15px), linear-gradient(to bottom, #6626ee, #6626ee), radial-gradient(circle at 0% 0%, transparent 13px, #6626ee 13px, #6626ee 15px, transparent 15px), linear-gradient(to left, #6626ee, #ff555e), radial-gradient(circle at 100% 0%, transparent 13px, #ff555e 13px, #ff555e 15px, transparent 15px), linear-gradient(to top, #ff555e, #ff555e);
+  background-size: 15px 15px, calc(100% - 30px) 2px, 15px 15px, 2px calc(100% - 30px);
+  background-position: top left, top center, top right, center right, bottom right, bottom center, bottom left, center left;
+  background-repeat: no-repeat;
+
+}
+
+.box-item {
+  grid-area: box-item;
+  background: rgba(0, 0, 0, 0.2);
+  border-radius: 16px;
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(5px);
+  -webkit-backdrop-filter: blur(5px);
+  background-image: radial-gradient(circle at 100% 100%, transparent 13px, #ff555e 13px, #ff555e 15px, transparent 15px), linear-gradient(to right, #ff555e, #6626ee), radial-gradient(circle at 0% 100%, transparent 13px, #6626ee 13px, #6626ee 15px, transparent 15px), linear-gradient(to bottom, #6626ee, #6626ee), radial-gradient(circle at 0% 0%, transparent 13px, #6626ee 13px, #6626ee 15px, transparent 15px), linear-gradient(to left, #6626ee, #ff555e), radial-gradient(circle at 100% 0%, transparent 13px, #ff555e 13px, #ff555e 15px, transparent 15px), linear-gradient(to top, #ff555e, #ff555e);
+  background-size: 15px 15px, calc(100% - 30px) 2px, 15px 15px, 2px calc(100% - 30px);
+  background-position: top left, top center, top right, center right, bottom right, bottom center, bottom left, center left;
+  background-repeat: no-repeat;
+  display: flex;
+  justify-content: space-between;
+}
+
+.css-83ijpv-MuiTypography-root {
+  color: #fff !important;
+}
+
+.p-nickname {
+  font-size: 1.5vw;
+  position: relative;
+  left: 15%;
+}
+
+/***** ACCOUNT DECORATION *****/
+
+.account_decoration {
+  position: relative;
+  /* left: 25%; */
+  display: flex;
+  width: 100%;
+  height: 100%;
+  align-items: center;
+}
+
+@media screen and (max-width: 1700px) {
+  .css-1p7a5wk-MuiButtonBase-root-MuiFab-root {
+    width: 45px !important;
+    height: 45px !important;
+  }
+
+  .css-tzssek-MuiSvgIcon-root {
+    width: 0.8em !important;
+    height: 0.8em !important;
+  }
+}
+
+.account_decor_down_ {
+  background-size: cover;
+  background-repeat: no-repeat;
+  width: 120%;
+}
+
+.txt_container_account {
+  position: relative;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.txt-account {
+  position: relative;
+  font-family: 'Smooch Sans', sans-serif;
+  font-size: 2vw;
+  color: #fff;
+  letter-spacing: 0.1rem;
+  word-spacing: 0.5rem;
+  font-weight: 530;
+  text-align: center;
+}
+
+.txt-account-strong {
+  background: linear-gradient(90deg, rgba(255, 85, 94, 1) 0%, rgba(102, 38, 238, 1) 100%);
+  font-family: 'Odibee Sans', sans-serif;
+  /* font-family: 'Smooch Sans', sans-serif; */
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  letter-spacing: 0.2rem;
+  font-weight: 700;
+}
+
+.score__txt {
+  margin-top: 20px;
+  font-family: 'Smooch Sans', sans-serif;
+  font-size: 3vw;
+  letter-spacing: 0.2rem;
+  font-weight: 450;
+}
+
+.rank-txt {
+  color: #fff;
+  font-weight: 300;
+  font-family: 'Smooch Sans', sans-serif;
+  font-size: 3vw;
+  letter-spacing: 0.2rem;
+  text-align: center;
+}
+
+.no-rank {
+  color: #fff;
+  font-weight: 500;
+  font-family: 'Smooch Sans', sans-serif;
+  font-size: 4vw;
+  letter-spacing: 0.2rem;
+}
+
+/*** Avatar img request***/
+
+.avatar__img-request {
+  position: relative;
+  left: 2%;
+  width: 50px;
+  height: 50px;
+  margin: 5%;
+}
+
+.avatar__img-request img {
+  width: 90%;
+  height: 90%;
+  display: block;
+  object-fit: cover;
+  border-radius: 50%;
+}
+
+/*** Avatar img ***/
+.avatar__img-account {
+  position: relative;
+  left: 2%;
+  width: 220px;
+  height: 220px;
+  margin: 5%;
+}
+
+.avatar__img-account img {
+  width: 90%;
+  height: 90%;
+  display: block;
+  object-fit: cover;
+  border-radius: 50%;
+  border: 2px solid rgb(255, 85, 94);
+}
+
+.table-tabs {
+  position: relative;
+  top: 1%;
+}
+
+
+.css-10d9dml-MuiTabs-indicator {
+  /* background: linear-gradient(180deg, rgba(255,85,94,1) 0%, rgba(102,38,238,1) 110%) !important; */
+  background: rgba(255, 85, 94, 1) !important;
+}
+
+.css-13imhw-MuiButtonBase-root-MuiTab-root.Mui-selected {
+  background: linear-gradient(-90deg, #6626ee, #e91e63) !important;
+  font-family: 'Smooch Sans', sans-serif !important;
+  -webkit-background-clip: text !important;
+  -webkit-text-fill-color: transparent !important;
+  font-weight: 700 !important;
+}
+
+.MuiListItemText-secondary {
+  color: #fff;
+}
+
+.css-1p823my-MuiListItem-root {
+  text-align: center !important;
+}
+
+.css-1p823my-MuiListItem-root {
+  justify-content: center !important;
+}
+
+.css-1b46qz1-MuiList-root:nth-child(even) {
+  /* background:  linear-gradient(90deg, rgba(255,85,94,0.1) 0%, rgba(102,38,238,0.1) 110%); */
+}
+
+.table_dashboard {
+  position: relative;
+  display: flex;
+  top: 5%;
+  flex-direction: column;
+  width: 100%;
+  max-height: 50vh;
+  overflow-y: auto;
+  /* background-color: rgba(235, 233, 247, 1); */
+}
+
+.VS {
+  font-family: 'Odibee Sans', sans-serif;
+  font-size: 5vw;
+  padding: 0 4rem;
+  background: -webkit-linear-gradient(0deg, rgba(255, 85, 94, 1) 5%, rgba(102, 38, 238, 1) 75%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.request-list {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 5%;
+}
+
+.block-button-txt {
+  color: #fff;
+  font-family: 'Odibee Sans', sans-serif;
+  letter-spacing: 0.2rem;
+  font-weight: 500;
+  padding-top: 10px;
+}
+
+/******* buttons *******/
+
+.css-kznubb-MuiButtonBase-root-MuiFab-root {
+  background: rgba(102, 38, 238, 1) !important;
+}
+
+h3 {
+  color: #fff;
+}
+
+.noselect:focus {
+  outline: none;
+}
+
+.friendship-title {
+  color: #fff;
+  font-size: 2.5vw;
+  letter-spacing: 0.2rem;
+  font-family: 'Smooch Sans, sans-serif';
+  padding: 3%;
+  text-align: center;
+}
+
+/****************** RESPONSIVE **************/
+
+@media screen and (max-width: 1030px) {
+
+  .avatar__img-account {
+    max-width: 120px;
+    max-height: 120px;
+  }
+
+  .profile-card-inf__item {
+    letter-spacing: 0.1rem;
+    font-size: 2rem;
+  }
+
+  .b_account {
+    font-size: 1rem;
+  }
+
+  .profile-card-inf__item {
+    padding: 1rem 1rem;
+  }
+
+  .account_decoration .account_decor {
+    opacity: 0;
+  }
+
+  .txt_container_account {
+    text-align: center;
+
+  }
+
+  .rank-txt {
+    left: 10%;
+    top: 45%;
+  }
+
+  .profile-card-inf__title {
+    font-size: 1.3vw;
+    letter-spacing: 0.1rem;
+  }
+
+  .profile-card-inf__txt {
+    font-size: 1.5vw;
+    font-weight: 500;
+    letter-spacing: 0.1rem;
+  }
+
+  .noselect {
+    width: 7vw;
+    height: 5vh;
+  }
+
+  .noselect svg {
+    fill: white;
+  }
+}
+
+/**** LAPTOP****/
+
+/* RESPOSIVE CONTAINER */
+
+@media (max-width: 900px) {
+  .wrap {
+    position: absolute;
+    grid-template-columns: 0.8fr 0.9fr 0.8fr;
+    grid-template-rows: 0.9fr 1fr 1fr;
+    gap: 10px;  
+    grid-template-areas:
+    'main main main'
+    'request request request'
+    'box-item box-item box-item';
+  }
+
+  .main {
+    width: 90vw;
+    height: auto;
+  }
+
+  .avatar__img-account {
+    width: 120px;
+    height: 120px;
+  }
+
+  .account_decor_down {
+  display: none;
+}
+
+.account_decor_top {
+  display: none;
+}
+
+.txt-account {
+  font-size: 4vw !important;
+}
+
+.txt-account-strong {
+  font-size: 3vw;
+}
+
+.p-nickname {
+  font-size: 3vw !important;
+  position: relative;
+  left: 15%;
+}
+
+.score__txt {
+  font-size: 5vw;
+}
+
+.rank-txt {
+  font-size: 5vw;
+}
+
+.no-rank {
+  font-size: 4vw;
+}
+  
+.friendship-title {
+  font-size: 2rem;
+  font-family: 'Smooch Sans', sans-serif;
+  padding-bottom: 0 !important;
+}
+
+.block-button-txt {
+  padding-top: -1%;
+  padding-bottom: 1%;
+}
+
+.css-1p7a5wk-MuiButtonBase-root-MuiFab-root {
+  margin-top: 2% !important;
+  margin-bottom: 2% !important;
+}
+
+.css-1my7ety-MuiTabs-root {
+  width: 20% !important;
+}
+
+.css-13imhw-MuiButtonBase-root-MuiTab-root {
+  font-size: 1.5rem !important;
+}
+
+}
+
+/**** LAPTOP ****/
+
+@media screen and (max-width: 1380px) {
+  .wrap {
+    top: 8vh;
+  }
+
+  .avatar__img-account {
+    width: 130px;
+    height: 130px;
+  }
+
+}
+
+/*** TABLET ***/
+@media screen and (max-width: 480px) {
+  .avatar__img-account {
+    width: 100px;
+    height: 100px;
+  }
+
+}
+
+
+
+/***** FRIEND LIST *****/
+
+.p_friendlist {
+  font-family: 'Smooch Sans', sans-serif;
+  color: #fff;
+  font-size: 1.3vw;
+  letter-spacing: 0.1rem;
+  font-weight: 800;
+  margin: 0 2vw;
+}
+
+.table_dashboard.leonardoHaDecisoCosi {
+  max-height: 15vh;
+}
