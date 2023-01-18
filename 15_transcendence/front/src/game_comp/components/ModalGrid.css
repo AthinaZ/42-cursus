@@ -1,0 +1,144 @@
+.grid_item_1 {
+	grid-area: rnd_game;
+	background-color: transparent;
+	cursor: pointer;
+}
+.grid_item_2 {
+	grid-area: slct_friend;
+	background-color: transparent;
+}
+.grid_item_3 {
+	grid-area: match_spect_list;
+	/* background-color: rgba(255, 255, 255, 0.8); */
+	background: transparent;
+	color: white;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	padding: 20px 0;
+	font-size: 1.6rem;
+}
+
+.classic_grid_container{
+	display: grid;
+	height: 30vh;
+	grid-template-areas:
+	  'rnd_game slct_friend'
+	  'match_spect_list match_spect_list'
+	  'match_spect_list match_spect_list'
+	  'match_spect_list match_spect_list';
+	gap: 10px;
+	border-radius: 15px;
+	font-family: 'Tomorrow', sans-serif;
+}
+
+
+/* .classic_grid_container::before , .classic_grid_container::after {
+    content: '';
+    position: absolute;
+    left: -2px;
+    top:-2px;
+    background: linear-gradient(45deg, #ffffff, #ff6600, #ff0051, #ff0099, #e600ff, #cc00ff);
+    border-radius: 15px;
+    background-size: 400%;
+    width: calc(100% + 5px);
+    height: calc(100% + 5px);
+    z-index: -1;
+    animation: animate 20s linear infinite;
+}
+
+
+@keyframes animate {
+    0% { background-position: 0 0; }
+    50% { background-position: 400% 0; }
+    100% { background-position: 0 0; }
+} */
+
+.classic_grid_container::after {
+    filter: blur(20px);
+    opacity: 0.80;
+}
+
+/************** MATCHMAKING **************/
+.logo_holder {
+	width: 100%;
+	height: 100px;
+	border: 0;
+	outline: none;
+	background-color: var(--purple-color);
+	cursor: pointer;
+	position: relative;
+	color: var(--white-color);
+	clip-path: polygon(92% 0, 100% 25%, 100% 100%, 8% 100%, 0% 75%, 0 0);
+	z-index: 1;
+	margin: auto auto auto;
+}
+.logo {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	position: absolute;
+	font-family: 'Tomorrow', sans-serif;
+	font-weight: 400;
+	font-size: 1.6rem;
+	text-transform: uppercase;
+	top: 2px;
+	left: 2px;
+	right: 2px;
+	bottom: 2px;
+	background-color: black;
+	clip-path: polygon(92% 0, 100% 25%, 100% 100%, 8% 100%, 0% 75%, 0 0);
+	z-index: 2;
+
+}
+
+.logo_holder:hover {
+	background-color: var(--white-color);
+}
+
+.logo_holder:hover .logo {
+	background-color: var(--black-light-color);
+	color: var(--white-color);
+}
+/*****************************************/
+
+.running_matches_holder {
+	width: 70%;
+	height: 40px;
+	border: 0;
+	outline: none;
+	background-color: var(--purple-color);
+	cursor: pointer;
+	position: relative;
+	color: var(--white-color);
+	clip-path: polygon(92% 0, 100% 25%, 100% 100%, 8% 100%, 0% 75%, 0 0);
+	z-index: 1;
+	margin: 1% auto 0;
+}
+.running_matches {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	position: absolute;
+	font-family: 'Tomorrow', sans-serif;
+	font-weight: 400;
+	font-size: 1.1rem;
+	text-transform: uppercase;
+	top: 2px;
+	left: 2px;
+	right: 2px;
+	bottom: 2px;
+	background-color: black;
+	clip-path: polygon(92% 0, 100% 25%, 100% 100%, 8% 100%, 0% 75%, 0 0);
+	z-index: 2;
+
+}
+
+.running_matches_holder:hover {
+	background-color: var(--white-color);
+}
+
+.running_matches_holder:hover .running_matches {
+	background-color: var(--black-light-color);
+	color: var(--white-color);
+}
